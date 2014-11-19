@@ -628,6 +628,9 @@ $.extend( $.validator, {
 				return;
 			}
 			if ( this.objectLength( rules ) ) {
+      if ( this.settings.successPlacement ) {
+        this.settings.successPlacement( element );
+      }
 				this.successList.push( element );
 			}
 			return true;
